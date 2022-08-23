@@ -3,7 +3,7 @@ from PIL import Image
 
 class image_loader(object):
     def __init__(self):
-        pass
+        return
 
     def load_image(self, im_path):
         try:
@@ -13,5 +13,5 @@ class image_loader(object):
         except :
             raise 'Unable to open image'
 
-    def increase_contrast(self, im_arr, threshold = 0.5):
+    def increase_contrast(self, image_arr, threshold = 0.5):
         return (np.sign(image_arr - 0.5) + 1) / 2
