@@ -11,7 +11,8 @@ each character is 7 pixel wide, characters starts from  5-th pixel from the left
 Height-wise, characters start from 11-th pixel from the top; height of characters are 9 pixels tall, so 63 pixels per char.
 
 Each captcha, first segment into characters, and compare to dictionary of characters we have for each character encountered in sample data.
-Find closest match in terms of L1 - distance. (arguably, can choose other metrics such as Frobenius norm so less sensitive to noise). 
+Find closest match in terms of L1 - distance. (in theory should choose other metrics such as Frobenius norm so less sensitive to noise, 
+but since data is not too complicated, we tentatively use L1 norm). 
 
 After matching all characters, return captcha phrase by concatenating all characters.
 '''
